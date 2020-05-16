@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dummy-logger
+spec:
+  containers:
+  -  name: logger-containers
+     image: xawe/dummy-logger:2.0
