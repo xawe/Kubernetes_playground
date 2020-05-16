@@ -17,3 +17,22 @@ Verificar se o pod foi criado corretamente.
 para ver os logs da aplicação
 
     kubectl logs --follow dummy-logger
+
+-------------------------------------
+
+Para testar o pod do redis, pode ser feito diretamente da maquina liberando uma porta especifica
+
+    kubectl port-forward svc/redis-service 7000:9000
+
+Para testar usando o redis cli 
+
+    redis-cli -h localhost -p 7000 ping
+
+Caso não tenha instalado
+
+    sudo apt install redis-tools
+
+
+Para po portforward no vist-counter
+
+    kubectl port-forward svc/visit-counter-service 2000:3000

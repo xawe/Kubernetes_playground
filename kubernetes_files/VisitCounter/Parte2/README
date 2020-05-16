@@ -1,0 +1,11 @@
+Configurando ingress para não necessitar do portforward
+
+    minikube addons enable ingress
+
+Executar a configuração do Ingress 
+
+    kubectl apply -f my-ingress.yaml
+
+Para fazer o teste, é necessário saber qual o ip em que o minikube está rodando
+
+    minikube ip

@@ -1,0 +1,18 @@
+A aplicação VisitCounter é uma api que conta quantas requisições foram feitas para o endereço
+O servico usa a porta 3000 e direciona para a porta 8000 da aplicação.
+
+http://localhost:2000 
+
+Instalação.
+
+Executar o arquivo de deployment
+
+    kubectl apply -f visit-counter-deployment.yaml
+
+Executar o arquivo de service
+    
+    kubectl apply -f visit-counter-service.yaml
+
+Usasr o port-forward para testar 
+
+    kubectl port-forwar svc/visit-counter-service 2000:3000
